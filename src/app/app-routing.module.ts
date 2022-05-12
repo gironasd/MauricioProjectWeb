@@ -13,7 +13,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 const routes: Routes = [
   
-  { path: '404', component: NopagefoundComponent}
+  { path: '404', component: NopagefoundComponent }
 ];
 
 @NgModule({

@@ -1,9 +1,14 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { tap, map, catchError } from 'rxjs/operators'
 import { LoginForm } from '../interfaces/login-form.interface';
 import { Observable, of } from 'rxjs';
+import { Router } from '@angular/router';
+import { Usuario } from '../models/usuario.model';
+
+import { UsuarioMovil } from '../models/usuario-movil.model';
+import { CargarUsuario } from '../interfaces/cargar-usuariosmoviles.interface';
 
 const base_url = environment.base_url
 
@@ -12,7 +17,11 @@ const base_url = environment.base_url
 })
 export class UsuarioService {
 
-  constructor( private http: HttpClient) { }
+  //public usuariom: UsuarioMovil
+
+  constructor( private http: HttpClient,
+                private router: Router,
+                private ngZone: NgZone) { }
 
   validarToken(): Observable<boolean> {
     const token = localStorage.getItem('token') || '';
@@ -44,6 +53,11 @@ export class UsuarioService {
                         localStorage.setItem('token', resp.token)
                       })
                     )
+  }
+
+  cargarUsuarios() {
+    const url = `${ base_url }/usuario-movil`
+    return this.http.get<CargarUsuario>( url )
   }
 
 }

@@ -6,6 +6,9 @@ import { ProgressComponent } from './progress/progress.component';
 import { Grafica1Component } from './grafica1/grafica1.component';
 import { AuthGuard } from '../guards/auth.guard';
 
+import { UsuariosmComponent } from './usuariosM/usuariosm/usuariosm.component';
+import { CuentasComponent } from './cuentas/cuentas/cuentas.component';
+
 
 const routes: Routes = [
 
@@ -16,6 +19,10 @@ const routes: Routes = [
             { path: '', component: DashboardComponent },
             { path: 'progress', component: ProgressComponent },
             { path: 'grafica1', component: Grafica1Component },
+
+            //Las rutas de verdad
+            { path: 'usuario-movil', component: UsuariosmComponent, data: { titulo: 'Usuarios moviles'} },
+            { path: 'cuentas', component: CuentasComponent, data: { titulo: 'Cuentas'} },
         ]
     },  
 
