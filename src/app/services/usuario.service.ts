@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, NgZone } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { tap, map, catchError } from 'rxjs/operators'
+import { tap, map, catchError, delay } from 'rxjs/operators'
 import { LoginForm } from '../interfaces/login-form.interface';
 import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
@@ -57,7 +57,18 @@ export class UsuarioService {
 
   cargarUsuarios() {
     const url = `${ base_url }/usuario-movil`
+    
     return this.http.get<CargarUsuario>( url )
+
+  }
+
+  eliminarUsuario(usuariom: UsuarioMovil) {
+
+    const url = `${ base_url }/usuario-movil/${ usuariom.uid }`
+    
+    return this.http.delete( url )
+
+
   }
 
 }

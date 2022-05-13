@@ -5,14 +5,17 @@
 
                 <input type="text"
                         class="form-control"
-                        placeholder="Buscar usuario..."/>
+                        placeholder="Buscar usuario..."
+                        (keyup)="buscar( txtTermino.value)"
+                        #txtTermino/>
 
             </div>
         </div>
     </div>
 </div>
 
-<div class="row animated fadeIn fast">
+<div class="row animated fadeIn fast"
+        *ngIf="cargando">
     <div class="col-12">
        
         <div class="alert alert-info text-center">
@@ -24,7 +27,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row animated fadeIn fast" *ngIf="!cargando">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
@@ -49,7 +52,7 @@
                                 
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                    <a href="#" data-toggle="tooltip" data-original-title="Borrar"> <i class="fa fa-close text-danger"></i> </a> <!--(click)="eliminarUsuario(usuariom) class="cursor" -->
                                 </td>
                             </tr>
                            
