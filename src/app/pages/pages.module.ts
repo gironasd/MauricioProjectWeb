@@ -10,6 +10,8 @@ import { SharedModule } from '../shared/shared.module';
 import { AppRoutingModule } from '../app-routing.module';
 import { UsuariosmComponent } from './usuariosM/usuariosm/usuariosm.component';
 import { CuentasComponent } from './cuentas/cuentas/cuentas.component';
+import { CuentaComponent } from './cuentas/cuenta.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,7 +22,8 @@ import { CuentasComponent } from './cuentas/cuentas/cuentas.component';
     Grafica1Component,
     PagesComponent,
     UsuariosmComponent,
-    CuentasComponent
+    CuentasComponent,
+    CuentaComponent
   ],
   exports: [
     DashboardComponent, //todo funcionara de manera interna solo en pages
@@ -31,7 +34,9 @@ import { CuentasComponent } from './cuentas/cuentas/cuentas.component';
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PagesModule { }

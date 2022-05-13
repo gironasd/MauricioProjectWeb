@@ -8,7 +8,7 @@ export class Cuentas {
         public apellidos: string,
         public ciudad: string,
         public email: string, 
-        public uid?: string
+        public _id?: string
 
     ) {}
 }

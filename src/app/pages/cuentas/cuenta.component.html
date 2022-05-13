@@ -1,0 +1,78 @@
+<div class="col-lg-6">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Cuenta</h4>
+            <h6 class="card-subtitle">Modificar Información</h6>
+            <form class="form-horizontal p-t-20"
+                    [formGroup]="cuentaForm"
+                    (submit)="guardarCuenta()">
+
+                <div class="form-group row">
+                    <label for="exampleInputuname3" class="col-sm-3 control-label">Nombres</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input type="text" 
+                                    formControlName="nombres"
+                                    class="form-control" 
+                                    id="exampleInputEmail3" 
+                                    placeholder="Nombres del cliente">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="exampleInputEmail3" class="col-sm-3 control-label">Apellidos</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-user"></i></div>
+                            <input type="text" 
+                                    formControlName="apellidos"
+                                    class="form-control" 
+                                    id="exampleInputEmail3" 
+                                    placeholder="Apellidos del cliente">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="web" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="ti-email"></i></div>
+                            <input type="email" 
+                                    formControlName="email"
+                                    class="form-control" 
+                                    id="exampleInputEmail3" 
+                                    placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="web" class="col-sm-3 control-label">Ciudad</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <select class="form-control"
+                                    formControlName="ciudad">
+                                <option value="1">La Paz</option>
+                                <option value="2">Oruro</option>
+                                <option value="3">Cochabamba</option>
+                                <option value="4">Sucre</option>
+                                <option value="5">Santa Cruz</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group row m-b-0">
+                    <div class="offset-sm-3 col-sm-9">
+                        <button type="submit" 
+                                [disabled]="cuentaForm.invalid"
+                                class="btn btn-success waves-effect waves-light">
+                            <i class="fa fa-save"></i>
+                            Guardar
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@ import { AuthGuard } from '../guards/auth.guard';
 
 import { UsuariosmComponent } from './usuariosM/usuariosm/usuariosm.component';
 import { CuentasComponent } from './cuentas/cuentas/cuentas.component';
+import { CuentaComponent } from './cuentas/cuenta.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,8 @@ const routes: Routes = [
             //Las rutas de verdad
             { path: 'usuario-movil', component: UsuariosmComponent, data: { titulo: 'Usuarios moviles'} },
             { path: 'cuentas', component: CuentasComponent, data: { titulo: 'Cuentas'} },
+            { path: 'cuenta/:id', component: CuentaComponent, data: { titulo: 'Cuentas'} },
+
         ]
     },  
 
