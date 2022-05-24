@@ -12,6 +12,8 @@ import { UsuariosmComponent } from './usuariosM/usuariosm/usuariosm.component';
 import { CuentasComponent } from './cuentas/cuentas/cuentas.component';
 import { CuentaComponent } from './cuentas/cuenta.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuarioMComponent } from './usuariosM/usuario-m/usuario-m.component';
+import { PagosComponent } from './pagos/pagos.component';
 
 
 
@@ -23,7 +25,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PagesComponent,
     UsuariosmComponent,
     CuentasComponent,
-    CuentaComponent
+    CuentaComponent,
+    UsuarioMComponent,
+    PagosComponent
   ],
   exports: [
     DashboardComponent, //todo funcionara de manera interna solo en pages

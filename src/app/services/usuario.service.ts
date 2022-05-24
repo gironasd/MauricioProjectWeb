@@ -64,11 +64,30 @@ export class UsuarioService {
 
   eliminarUsuario(usuariom: UsuarioMovil) {
 
-    const url = `${ base_url }/usuario-movil/${ usuariom.uid }`
+    const url = `${ base_url }/usuario-movil/${ usuariom._id }`
     
     return this.http.delete( url )
 
 
+  }
+
+  obtenerUsuarioById( id: string ){ 
+    const url = `${ base_url }/usuario-movil/${ id }`
+    return this.http.get( url )
+                    .pipe(
+                      map( (resp: { ok: boolean, usuarios: UsuarioMovil}) => resp.usuarios)
+                    );
+  }
+
+  crearUsuarioMovil( usuario: { nombre: string, password: string, email:string, ciudad:string} ) {
+    const url = `${ base_url }/usuario-movil`
+    return this.http.post( url, usuario )
+  }
+
+  actualizarUsuarioM ( usuariom: UsuarioMovil ){
+
+    const url = `${ base_url }/usuario-movil/${ usuariom._id }`
+    return this.http.put( url, usuariom)
   }
 
 }

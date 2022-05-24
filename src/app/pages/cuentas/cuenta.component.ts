@@ -43,10 +43,19 @@ export class CuentaComponent implements OnInit {
   }
 
   cargarCuenta( id: string ){
+
+    if ( id === 'nuevo'){
+      return;
+    }
+
     this.cuentaService.obtenerCuentaById( id )
       .subscribe ( cuentas =>{
+
+        if ( !cuentas ) {
+          return this.router.navigateByUrl(`/dashboard/cuentas/`)
+        }
         const { nombres, apellidos, email, ciudad } = cuentas
-        //console.log( nombres)
+        console.log( ciudad )
         this.cuentaSeleccionada = cuentas
         this.cuentaForm.setValue({ nombres, apellidos, email, ciudad})
        
@@ -57,13 +66,29 @@ export class CuentaComponent implements OnInit {
   guardarCuenta(){
     const {nombres} = this.cuentaForm.value
 
-    this.cuentaService.crearCuenta( this.cuentaForm.value)
-        .subscribe( (resp: any) => {
+    if( this.cuentaSeleccionada ) {
+      //actualizar
+      const data = {
+        ...this.cuentaForm.value,
+        _id: this.cuentaSeleccionada._id
+      }
+      this.cuentaService.actualizarCuenta( data )
+        .subscribe( resp => {
           console.log(resp)
-          Swal.fire('Creado', `${ nombres } creado correctamente`, 'success')
-          this.router.navigateByUrl(`/dashboard/cuenta/${ resp.cuenta._id}`)
+          Swal.fire('Actualizado', `${ nombres } actualizado correctamente`, 'success')
         })
 
+    } else {
+      //Crear
+      this.cuentaService.crearCuenta( this.cuentaForm.value)
+      .subscribe( (resp: any) => {
+        console.log(resp)
+        Swal.fire('Creado', `${ nombres } creado correctamente`, 'success')
+        this.router.navigateByUrl(`/dashboard/cuenta/${ resp.cuenta._id}`)
+      })
+    }
+
+    
   }
 
 }

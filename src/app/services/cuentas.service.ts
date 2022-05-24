@@ -50,6 +50,12 @@ export class CuentasService {
 
 
   }
+
+  actualizarCuenta ( cuenta: Cuentas ){
+
+    const url = `${ base_url }/cuentas/${ cuenta._id }`
+    return this.http.put( url, cuenta)
+  }
 }
 
 

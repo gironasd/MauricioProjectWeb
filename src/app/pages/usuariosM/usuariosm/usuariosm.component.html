@@ -31,8 +31,24 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Usuarios Moviles</h4>
-                <h6 class="card-subtitle">Usuarios moviles registrados</h6>
+               
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="card-title">Usuarios Moviles</h4>
+                        <h6 class="card-subtitle">Usuarios moviles registrados</h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="text-right">
+                           <a class="btn btn-primary"
+                                routerLink="/dashboard/usuario-movil/nuevo">
+                                Crear Usuario
+    
+                           </a> 
+                        </div>
+                    </div>
+                </div>
+
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
@@ -51,8 +67,13 @@
                                
                                 
                                 <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Borrar"> <i class="fa fa-close text-danger"></i> </a> <!--(click)="eliminarUsuario(usuariom) class="cursor" -->
+                                    <a [routerLink]="[ '/dashboard/usuario-movil', usuariom._id]"data-toggle="tooltip" data-original-title="Editar"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                    <a class="cursor"
+                                        data-toggle="tooltip" 
+                                        (click)="eliminarUsuario(usuariom)"
+                                        data-original-title="Close"> 
+                                        <i class="fa fa-close text-danger"></i> 
+                                    </a>
                                 </td>
                             </tr>
                            

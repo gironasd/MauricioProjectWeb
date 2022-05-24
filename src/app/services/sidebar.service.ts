@@ -7,11 +7,18 @@ export class SidebarService {
 
   public menu: any[] = [
     {
+      titulo: 'Pagos',
+      icono: 'mdi mdi-gauge',
+      submenu: [
+        { titulo: 'Lista Pagos', url: 'pagos'},
+      ]
+    },
+    {
       titulo: 'Usuario Moviles',
       icono: 'mdi mdi-gauge',
       submenu: [
         { titulo: 'Lista de Usuario moviles', url: 'usuario-movil'},
-        { titulo: 'Registrar nuevo', url: '/nuevo-um'}
+        { titulo: 'Registrar nuevo', url: 'usuario-movil/nuevo'}
       ]
     },
     {
@@ -19,7 +26,7 @@ export class SidebarService {
       icono: 'mdi mdi-gauge',
       submenu: [
         { titulo: 'Lista de cuentas', url: 'cuentas'},
-        { titulo: 'Registrar nuevo', url: '/nueva-cuenta'}
+        { titulo: 'Registrar nuevo', url: 'cuenta/nuevo'}
       ]
     }
   ]

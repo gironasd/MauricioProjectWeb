@@ -9,7 +9,7 @@ export class UsuarioMovil {
         public email: string,
         public ciudad: string,
         public password?: string, 
-        public uid?: string
+        public _id?: string
 
     ) {}
 }
