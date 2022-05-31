@@ -14,6 +14,7 @@ import { CuentaComponent } from './cuentas/cuenta.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioMComponent } from './usuariosM/usuario-m/usuario-m.component';
 import { PagosComponent } from './pagos/pagos.component';
+import { ComponentsModule } from '../components/components.module';
 
 
 
@@ -40,7 +41,8 @@ import { PagosComponent } from './pagos/pagos.component';
     SharedModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ComponentsModule
   ]
 })
 export class PagesModule { }

@@ -62,17 +62,30 @@
                     </div>
                 </div>
                 
-                <div class="form-group row m-b-0">
-                    <div class="offset-sm-3 col-sm-9">
+                <div class="row">
+                    <div class="col-6 col-sm-3">
                         <button type="submit" 
                                 [disabled]="cuentaForm.invalid"
                                 class="btn btn-success waves-effect waves-light">
                             <i class="fa fa-save"></i>
                             Guardar
                         </button>
+                        
                     </div>
+                   
                 </div>
             </form>
+            <br><br>
+            <div class="row">
+                <button class="btn btn-success waves-effect waves-light"
+                        (click)="abrirModal()">
+                    <i class="fa fa-save"></i>
+                    Extracto de Pagos
+                </button>
+            </div>
+           
         </div>
     </div>
 </div>
+
+

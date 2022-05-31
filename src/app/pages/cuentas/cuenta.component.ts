@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cuentas } from 'src/app/models/cuentas.model';
+import { Pagos } from 'src/app/models/pago.model';
 import { CuentasService } from 'src/app/services/cuentas.service';
+import { ModalcuentaService } from 'src/app/services/modalcuenta.service';
+import { PagoService } from 'src/app/services/pago.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -16,12 +19,17 @@ export class CuentaComponent implements OnInit {
   public cuentaForm!: FormGroup;
   public cuenta: Cuentas[] = []
   public cuentaSeleccionada!: Cuentas;
+  public pago: Pagos[] = [];
+  public id: string;
 
   constructor( 
     private fb: FormBuilder,
     private cuentaService: CuentasService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public modalcuentaService: ModalcuentaService,
+    private pagoService: PagoService,
+    
     ) {
     
    }
@@ -90,5 +98,15 @@ export class CuentaComponent implements OnInit {
 
     
   }
+
+  abrirModal(){
+    
+    
+    this.activatedRoute.params.subscribe( ({id}) => {
+      this.modalcuentaService.abrirModal(id)
+    })
+  }
+
+ 
 
 }

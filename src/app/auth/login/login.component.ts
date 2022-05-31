@@ -30,7 +30,7 @@ export class LoginComponent {
     this.usuarioService.login( this.loginForm.value )
     .subscribe( resp => {
         console.log(resp)
-        this.router.navigateByUrl('dashboard')
+        this.router.navigateByUrl('dashboard/pagos')
       }, (err) =>  {
         Swal.fire('Error', err.error.msg, 'error')
       })
