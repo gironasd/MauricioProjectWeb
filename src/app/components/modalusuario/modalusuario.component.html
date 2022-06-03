@@ -1,0 +1,73 @@
+<div class="fondo-modal animated fadeIn fast" [class.oculto]="modalUsuarioService.ocultarModal" > 
+    <div class="modal fade bs-example-modal-lg show" 
+    tabindex="-1" 
+    role="dialog" 
+    aria-labelledby="myLargeModalLabel" 
+    style="display: block;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myLargeModalLabel">Extracto de Pagos</h4>
+                <button type="button" 
+                        class="close" 
+                        data-dismiss="modal" 
+                        aria-hidden="true"
+                        (click)="cerrarModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="card-body">
+                    <h4 class="card-title" (click)="cargarPagos()">Historial de cobros </h4>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Cuenta</th>
+                                    <th>Fecha</th>
+                                    <th>Monto (Bs)</th>
+                                    <th>Monto ($us)</th>    
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let pagocuentas of pago">
+                                    <td>{{ pagocuentas.usuarioM.nombre }}</td>
+                                    <td>{{ pagocuentas.cuenta.nombres}} {{ pagocuentas.cuenta.apellidos }}</td>
+                                    <td>{{ pagocuentas.fecha | date: 'dd/mm/YYYY HH:mm'}}</td>
+                                    <td>{{ pagocuentas.montoBs}}</td>
+                                    <td>{{ pagocuentas.montoSus }}</td>
+                                   
+                                   
+                                   
+                                    <td class="text-nowrap">
+                                        
+                                        <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                    </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+    
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" 
+                        class="btn btn-danger waves-effect text-left" 
+                        data-dismiss="modal"
+                        (click)="cerrarModal()">
+                        Close
+                </button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+</div>
+
+
+

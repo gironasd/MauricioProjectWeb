@@ -30,8 +30,32 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Pagos ({{ pagos.length }})</h4>
+                <!-- <h4 class="card-title">Pagos ({{ pagos.length }})</h4>
                 <h6 class="card-subtitle">Pagos registrados del dia</h6>
+                <div class="col">
+                    <div class="text-right">
+                       <a class="btn btn-primary"
+                                (click)="createPDF()">
+                            Reporte
+                       </a> 
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="card-title">Pagos ({{ pagos.length }})</h4>
+                        <h6 class="card-subtitle">Pagos registrados del dia</h6>
+                    </div>
+
+                    <div class="col">
+                        <div class="text-right">
+                           <button class="btn btn-primary"
+                                (click)="createPDF()">
+                                Reporte
+    
+                            </button> 
+                        </div>
+                    </div>
+                </div>
                 <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>

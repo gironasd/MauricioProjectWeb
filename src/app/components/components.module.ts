@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalcuentaComponent } from './modalcuenta/modalcuenta.component';
+import { ModalusuarioComponent } from './modalusuario/modalusuario.component';
 
 
 
 @NgModule({
   declarations: [
-    ModalcuentaComponent
+    ModalcuentaComponent,
+    ModalusuarioComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    ModalcuentaComponent
+    ModalcuentaComponent,
+    ModalusuarioComponent
   ],
 
 })

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsuarioMovil } from 'src/app/models/usuario-movil.model';
+import { ModalusuarioService } from 'src/app/services/modalusuario.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import Swal from 'sweetalert2';
 
@@ -19,7 +20,8 @@ export class UsuarioMComponent implements OnInit {
     private fb: FormBuilder,
     private cuentaService: UsuarioService,
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    public modalUsuarioService: ModalusuarioService
     ) {
     
    }
@@ -85,6 +87,14 @@ export class UsuarioMComponent implements OnInit {
 
    
 
+  }
+
+  abrirModal(){
+    
+    
+    this.activatedRoute.params.subscribe( ({id}) => {
+      this.modalUsuarioService.abrirModal(id)
+    })
   }
 
 }
