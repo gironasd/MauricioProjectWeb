@@ -15,6 +15,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsuarioMComponent } from './usuariosM/usuario-m/usuario-m.component';
 import { PagosComponent } from './pagos/pagos.component';
 import { ComponentsModule } from '../components/components.module';
+import { LocalizacionComponent } from './localizacion/localizacion.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+
 
 
 
@@ -28,7 +31,8 @@ import { ComponentsModule } from '../components/components.module';
     CuentasComponent,
     CuentaComponent,
     UsuarioMComponent,
-    PagosComponent
+    PagosComponent,
+    LocalizacionComponent
   ],
   exports: [
     DashboardComponent, //todo funcionara de manera interna solo en pages
@@ -42,7 +46,9 @@ import { ComponentsModule } from '../components/components.module';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    ComponentsModule
+    ComponentsModule,
+    GoogleMapsModule
+    
   ]
 })
 export class PagesModule { }

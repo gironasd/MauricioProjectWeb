@@ -4,8 +4,11 @@
 
 export const environment = {
   production: false,
-  base_url: 'http://localhost:3000/api'
+  base_url: 'http://localhost:3000/api',
+  mapboxToken: 'pk.eyJ1IjoiZHJnaXJvbmFzIiwiYSI6ImNsNDYzYnJ1NjA0bm0za29hczM3bXl2eWgifQ.GQf-sP_R7lSWi_yx-bqUfQ'
 };
+
+
 
 /*
  * For easier debugging in development mode, you can import the following file

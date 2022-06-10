@@ -37,7 +37,8 @@ export class CuentasService {
                     );
   }
 
-  crearCuenta( cuenta: { nombres: string, apellidos: string, email:string, ciudad:string} ) {
+  crearCuenta( cuenta: { nombres: string, apellidos: string, email:string, ciudad:string, latencia: number, longitud: number} ) {
+    console.log('Lo que llega: ', cuenta)
     const url = `${ base_url }/cuentas`
     return this.http.post( url, cuenta )
   }

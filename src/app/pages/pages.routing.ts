@@ -11,6 +11,7 @@ import { CuentasComponent } from './cuentas/cuentas/cuentas.component';
 import { CuentaComponent } from './cuentas/cuenta.component';
 import { UsuarioMComponent } from './usuariosM/usuario-m/usuario-m.component';
 import { PagosComponent } from './pagos/pagos.component';
+import { LocalizacionComponent } from './localizacion/localizacion.component';
 
 
 const routes: Routes = [
@@ -31,6 +32,8 @@ const routes: Routes = [
             { path: 'cuenta/:id', component: CuentaComponent, data: { titulo: 'Cuentas'} },
 
             { path: 'pagos', component: PagosComponent, data: { titulo: 'Pagos'} },
+
+            {path : 'localizacion', component: LocalizacionComponent, data: { titulo: 'Localizacion' } }
 
         ]
     },  

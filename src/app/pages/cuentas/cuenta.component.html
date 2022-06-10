@@ -1,91 +1,138 @@
-<div class="col-lg-6">
-    <div class="card">
-        <div class="card-body">
-            <h4 class="card-title">Cuenta</h4>
-            <h6 class="card-subtitle">Modificar Información</h6>
-            <form class="form-horizontal p-t-20"
-                    [formGroup]="cuentaForm"
-                    (submit)="guardarCuenta()">
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
 
-                <div class="form-group row">
-                    <label for="exampleInputuname3" class="col-sm-3 control-label">Nombres</label>
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <div class="input-group-addon"><i class="ti-user"></i></div>
-                            <input type="text" 
-                                    formControlName="nombres"
-                                    class="form-control" 
-                                    id="exampleInputEmail3" 
-                                    placeholder="Nombres del cliente">
+                <h4 class="card-title">Cuenta</h4>
+                <h6 class="card-subtitle">Modificar Información</h6>
+                <form class="form-horizontal p-t-20"
+                        [formGroup]="cuentaForm"
+                        (submit)="guardarCuenta()">
+
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Nombres</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" 
+                                        formControlName="nombres"
+                                        class="form-control" 
+                                        id="exampleInputEmail3" 
+                                        placeholder="Nombres del cliente">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="exampleInputEmail3" class="col-sm-3 control-label">Apellidos</label>
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <div class="input-group-addon"><i class="ti-user"></i></div>
-                            <input type="text" 
-                                    formControlName="apellidos"
-                                    class="form-control" 
-                                    id="exampleInputEmail3" 
-                                    placeholder="Apellidos del cliente">
+                    <div class="form-group row">
+                        <label for="exampleInputEmail3" class="col-sm-3 control-label">Apellidos</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-user"></i></div>
+                                <input type="text" 
+                                        formControlName="apellidos"
+                                        class="form-control" 
+                                        id="exampleInputEmail3" 
+                                        placeholder="Apellidos del cliente">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="web" class="col-sm-3 control-label">Email</label>
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <div class="input-group-addon"><i class="ti-email"></i></div>
-                            <input type="email" 
-                                    formControlName="email"
-                                    class="form-control" 
-                                    id="exampleInputEmail3" 
-                                    placeholder="Email">
+                    <div class="form-group row">
+                        <label for="web" class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-email"></i></div>
+                                <input type="email" 
+                                        formControlName="email"
+                                        class="form-control" 
+                                        id="exampleInputEmail3" 
+                                        placeholder="Email">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="web" class="col-sm-3 control-label">Ciudad</label>
-                    <div class="col-sm-9">
-                        <div class="input-group">
-                            <select class="form-control"
-                                    formControlName="ciudad">
-                                <option value="La Paz">La Paz</option>
-                                <option value="Oruro">Oruro</option>
-                                <option value="Cochabamba">Cochabamba</option>
-                                <option value="Sucre">Sucre</option>
-                                <option value="Santa Cruz">Santa Cruz</option>
-                            </select>
+                    <div class="form-group row">
+                        <label for="web" class="col-sm-3 control-label">Ciudad</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <select class="form-control"
+                                        formControlName="ciudad">
+                                    <option value="La Paz">La Paz</option>
+                                    <option value="Oruro">Oruro</option>
+                                    <option value="Cochabamba">Cochabamba</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Santa Cruz">Santa Cruz</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
+                    <div class="form-group row">
+                        <label for="web" class="col-sm-3 control-label">Latitud</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-email"></i></div>
+                                <input type="number" 
+                                        formControlName="latencia"
+                                        class="form-control" 
+                                        id="exampleInputEmail3" 
+                                        placeholder="Latencia">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="web" class="col-sm-3 control-label">Longitud</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="ti-email"></i></div>
+                                <input type="number" 
+                                        formControlName="longitud"
+                                        class="form-control" 
+                                        id="exampleInputEmail3" 
+                                        placeholder="Longitud">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-6 col-sm-3">
+                            <button type="submit" 
+                                    [disabled]="cuentaForm.invalid"
+                                    class="btn btn-success waves-effect waves-light">
+                                <i class="fa fa-save"></i>
+                                Guardar
+                            </button>
+                            
+                        </div>
+                    
+                    </div>
+                </form>
+                <br><br>
                 <div class="row">
-                    <div class="col-6 col-sm-3">
-                        <button type="submit" 
-                                [disabled]="cuentaForm.invalid"
-                                class="btn btn-success waves-effect waves-light">
-                            <i class="fa fa-save"></i>
-                            Guardar
-                        </button>
-                        
-                    </div>
-                   
+                    <button class="btn btn-success waves-effect waves-light"
+                            (click)="abrirModal()">
+                        <i class="fa fa-save"></i>
+                        Extracto de Pagos
+                    </button>
                 </div>
-            </form>
-            <br><br>
-            <div class="row">
-                <button class="btn btn-success waves-effect waves-light"
-                        (click)="abrirModal()">
-                    <i class="fa fa-save"></i>
-                    Extracto de Pagos
-                </button>
+            
             </div>
-           
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Mapa de ubicación &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button class="btn btn-success waves-effect waves-light" (click)="calcularUbicacion()">Ubicación</button>
+                </h4>
+               
+                <div id="mapa" >
+
+    
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+
+
+<app-modalcuenta></app-modalcuenta>
 
 

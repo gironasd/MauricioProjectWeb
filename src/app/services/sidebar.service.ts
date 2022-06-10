@@ -28,7 +28,14 @@ export class SidebarService {
         { titulo: 'Lista de cuentas', url: 'cuentas'},
         { titulo: 'Registrar nuevo', url: 'cuenta/nuevo'}
       ]
-    }
+    },
+    {
+      titulo: 'Localización',
+      icono: 'mdi mdi-gauge',
+      submenu: [
+        { titulo: 'Ver Mapa', url: 'localizacion'},
+      ]
+    },
   ]
 
   constructor() { }

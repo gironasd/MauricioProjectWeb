@@ -11,6 +11,10 @@ import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
 
 import { ComponentsModule } from './components/components.module';
+import { GoogleMapsModule } from '@angular/google-maps';
+
+
+
 
 
 @NgModule({
@@ -24,7 +28,9 @@ import { ComponentsModule } from './components/components.module';
     PagesModule,
     AuthModule,
     SharedModule,
-    ComponentsModule
+    ComponentsModule,
+    GoogleMapsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

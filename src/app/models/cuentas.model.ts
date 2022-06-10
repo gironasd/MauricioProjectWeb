@@ -8,6 +8,8 @@ export class Cuentas {
         public apellidos: string,
         public ciudad: string,
         public email: string, 
+        public latencia: number,
+        public longitud: number,
         public _id?: string
 
     ) {}
