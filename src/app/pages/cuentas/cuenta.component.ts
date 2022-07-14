@@ -94,6 +94,8 @@ export class CuentaComponent implements OnInit {
     this.cuentaForm = this.fb.group({
       nombres: ['', Validators.required],
       apellidos: ['', Validators.required],
+      ci: ['', Validators.required],
+      nro_cliente: ['', Validators.required],
       email: ['', Validators.required],
       ciudad: ['', Validators.required],
       latencia: [this.lat, Validators.required],
@@ -134,13 +136,15 @@ export class CuentaComponent implements OnInit {
     console.log('latitud ', lnglatArr[0].centro[1])
     
 
-    const {nombres, apellidos, email, ciudad} = this.cuentaForm.value
+    const {nombres, apellidos, ci, nro_cliente, email, ciudad} = this.cuentaForm.value
     
     
 
     this.cuentaForm = this.fb.group({
       nombres: [nombres, Validators.required],
       apellidos: [apellidos, Validators.required],
+      ci: [ci, Validators.required],
+      nro_cliente: [nro_cliente, Validators.required],
       email: [email, Validators.required],
       ciudad: [ciudad, Validators.required],
       latencia: [lnglatArr[0].centro[1], Validators.required],
@@ -164,10 +168,10 @@ export class CuentaComponent implements OnInit {
         if ( !cuentas ) {
           return this.router.navigateByUrl(`/dashboard/cuentas/`)
         }
-        const { nombres, apellidos, email, ciudad, latencia, longitud } = cuentas
+        const { nombres, apellidos, ci, nro_cliente, email, ciudad, latencia, longitud } = cuentas
         
         this.cuentaSeleccionada = cuentas
-        this.cuentaForm.setValue({ nombres, apellidos, email, ciudad, latencia, longitud})
+        this.cuentaForm.setValue({ nombres, apellidos, ci, nro_cliente, email, ciudad, latencia, longitud })
 
 
 

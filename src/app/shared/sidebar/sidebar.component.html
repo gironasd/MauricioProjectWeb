@@ -5,27 +5,38 @@
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                       
-                       
-                        <li class="nav-small-cap">OPCIONES</li>
-                        <li *ngFor="let item of menuItems"> 
-                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
-                                <i class="mdi mdi-gauge"></i>
-                                <span class="hide-menu">{{ item.titulo }} 
-                                    <span class="label label-rouded label-themecolor pull-right">{{ item.submenu.length }}</span>
-                                </span>
-                            </a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li *ngFor="let subMenuItem of item.submenu">
-                                    <a [routerLink]="subMenuItem.url" >{{subMenuItem.titulo}}</a>
-                                </li>
-                                
-                            </ul>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li>
+                            <a class="nav-link text-white">MENU DE OPCIONES</a>
                         </li>
-                       
-                        
-                    </ul>
+                        <br>
+                        <li >
+                            
+                          <a href="/dashboard/pagos/diaActivos" class="nav-link text-white" >
+                            
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="/pagos/diaActivos"></use></svg>
+                            Pagos
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/dashboard/cuentas" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="/dashboard/cuentas"></use></svg>
+                            Cuentas
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/dashboard/usuario-movil" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="/dashboard/cuentas"></use></svg>
+                            Usuarios Moviles
+                          </a>
+                        </li>
+                        <li>
+                          <a href="/dashboard/localizacion" class="nav-link text-white">
+                            <svg class="bi me-2" width="16" height="16"><use xlink:href="/dashboard/localizacion"></use></svg>
+                            Localización
+                          </a>
+                        </li>
+                      </ul>
                        
                 </nav>
                 <!-- End Sidebar navigation -->
@@ -34,3 +45,5 @@
         </aside>
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+
+     

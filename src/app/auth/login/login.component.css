@@ -18,6 +18,12 @@ File: scss
 /*******************
 Login register and recover password Page
 ******************/
+#fondo {
+  background-image:url(../../../assets/images/logo_mauricio.png);
+  background-size: 800px 700px;
+  background-position: left;
+}
+
 .login-register {
     background-size: cover;
     background-repeat: no-repeat;
@@ -25,10 +31,11 @@ Login register and recover password Page
     height: 100%;
     width: 100%;
     padding: 10% 0;
-    position: fixed; }
+    position: fixed; 
+  }
   
   .login-box {
-    width: 400px;
+    width: 500px;
     margin: 0 auto; }
     .login-box .footer {
       width: 100%;

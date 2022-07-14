@@ -25,7 +25,6 @@
                                     <th>Nombre</th>
                                     <th>Usuario</th>
                                     <th>Fecha</th>
-                                    <th>Monto (Bs)</th>
                                     <th>Monto ($us)</th>    
                                     
                                 </tr>
@@ -35,15 +34,9 @@
                                     <td>{{ pagocuentas.cuenta.nombres}} {{ pagocuentas.cuenta.apellidos }}</td>
                                     <td>{{ pagocuentas.usuarioM.nombre }}</td>
                                     <td>{{ pagocuentas.fecha | date: 'dd/mm/YYYY HH:mm'}}</td>
-                                    <td>{{ pagocuentas.montoBs}}</td>
                                     <td>{{ pagocuentas.montoSus }}</td>
                                    
                                    
-                                   
-                                    <td class="text-nowrap">
-                                        <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                        <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
-                                    </td>
                                 </tr>
                                
                             </tbody>

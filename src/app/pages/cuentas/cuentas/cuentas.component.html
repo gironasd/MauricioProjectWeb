@@ -54,19 +54,18 @@
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th>Nro. Cliente</th>
                                 <th>Ciudad</th>
-                                <th>Apellidos</th>
-                                <th>Nombres</th>
-                                <th>Email</th>
+                                <th>Nombre</th>
                                 <th class="text-nowrap" colspan="2"  >Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let cuentas of cuenta">
+                                <td>{{ cuentas.nro_cliente }}</td>
                                 <td>{{ cuentas.ciudad }}</td>
-                                <td>{{ cuentas.apellidos }}</td>
-                                <td>{{ cuentas.nombres }}</td>
-                                <td>{{ cuentas.email }}</td>
+                                <td>{{ cuentas.nombres }} {{cuentas.apellidos}}</td>
+                               
                                
                                 
                                 <td class="text-nowrap" align="center">

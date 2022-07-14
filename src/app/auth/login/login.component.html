@@ -1,7 +1,7 @@
 <!-- ============================================================== -->
 <!-- Main wrapper - style you can find in pages.scss -->
 <!-- ============================================================== -->
-<section id="wrapper" class="login-register login-sidebar" style="background-image:url(../assets/images/background/login-register.jpg);">
+<section id="wrapper" class="login-register login-sidebar" id="fondo" >
     <div class="login-box card">
         <div class="card-body">
             <form class="form-horizontal form-material" id="loginform" action="index.html"
@@ -9,6 +9,10 @@
                [formGroup]="loginForm"
                (ngSubmit)="login()"
                 id="loginform">
+
+                <div>
+                    <h2 class="card-title" align="center">Iniciar Sesión</h2>
+                </div>
                 
                 <div class="form-group m-t-40">
                     <div class="col-xs-12">
@@ -36,7 +40,7 @@
                 </div>
                 <div class="form-group text-center m-t-20">
                     <div class="col-xs-12">
-                        <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Log In</button>
+                        <button class="btn btn-info btn-lg btn-block text-uppercase btn-rounded" type="submit">Ingresar</button>
                     </div>
                 </div>
                 

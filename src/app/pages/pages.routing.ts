@@ -12,6 +12,7 @@ import { CuentaComponent } from './cuentas/cuenta.component';
 import { UsuarioMComponent } from './usuariosM/usuario-m/usuario-m.component';
 import { PagosComponent } from './pagos/pagos.component';
 import { LocalizacionComponent } from './localizacion/localizacion.component';
+import { PagoBusquedaComponent } from './pago-busqueda/pago-busqueda.component';
 
 
 const routes: Routes = [
@@ -20,9 +21,7 @@ const routes: Routes = [
         component: PagesComponent,
         canActivate: [ AuthGuard ],
         children: [
-            { path: '', component: DashboardComponent },
-            { path: 'progress', component: ProgressComponent },
-            { path: 'grafica1', component: Grafica1Component },
+            
 
             //Las rutas de verdad
             { path: 'usuario-movil', component: UsuariosmComponent, data: { titulo: 'Usuarios moviles'} },
@@ -31,7 +30,21 @@ const routes: Routes = [
             { path: 'cuentas', component: CuentasComponent, data: { titulo: 'Cuentas'} },
             { path: 'cuenta/:id', component: CuentaComponent, data: { titulo: 'Cuentas'} },
 
-            { path: 'pagos', component: PagosComponent, data: { titulo: 'Pagos'} },
+            { 
+                path: 'pagos/diaActivos', 
+                component: PagosComponent,                
+                data: { titulo: 'Pagos'} 
+            },
+            { 
+                path: 'pagos/diaAnulados', 
+                component: PagosComponent,                
+                data: { titulo: 'Pagos'} 
+            },
+            { 
+                path: 'pagos/:fecha', 
+                component: PagoBusquedaComponent,                
+                data: { titulo: 'PagosB'} 
+            },
 
             {path : 'localizacion', component: LocalizacionComponent, data: { titulo: 'Localizacion' } }
 

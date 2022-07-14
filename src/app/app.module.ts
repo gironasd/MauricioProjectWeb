@@ -12,6 +12,8 @@ import { SharedModule } from './shared/shared.module';
 
 import { ComponentsModule } from './components/components.module';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -29,7 +31,9 @@ import { GoogleMapsModule } from '@angular/google-maps';
     AuthModule,
     SharedModule,
     ComponentsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    BrowserAnimationsModule,
+    NgbModule
 
   ],
   providers: [],

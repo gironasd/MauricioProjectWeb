@@ -43,4 +43,14 @@ export class PagoService {
               )
            
   }
+
+  cargarPagosFecha(fecha){
+    const url = `${ base_url }/pagos/${ fecha }`
+    return this.http.get( url, this.headers )
+              .pipe(
+                map( (resp: {ok: boolean, pagos: Pagos[]}) => resp.pagos)
+              )
+  }
+
+
 }

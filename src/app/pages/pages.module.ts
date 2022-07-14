@@ -17,8 +17,8 @@ import { PagosComponent } from './pagos/pagos.component';
 import { ComponentsModule } from '../components/components.module';
 import { LocalizacionComponent } from './localizacion/localizacion.component';
 import { GoogleMapsModule } from '@angular/google-maps';
-
-
+import { NgbDate, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PagoBusquedaComponent } from './pago-busqueda/pago-busqueda.component';
 
 
 @NgModule({
@@ -32,7 +32,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     CuentaComponent,
     UsuarioMComponent,
     PagosComponent,
-    LocalizacionComponent
+    LocalizacionComponent,
+    PagoBusquedaComponent
   ],
   exports: [
     DashboardComponent, //todo funcionara de manera interna solo en pages
@@ -47,7 +48,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     FormsModule,
     ReactiveFormsModule,
     ComponentsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    NgbModule
     
   ]
 })

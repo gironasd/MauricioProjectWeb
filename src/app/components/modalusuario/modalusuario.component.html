@@ -25,7 +25,6 @@
                                     <th>Nombre</th>
                                     <th>Cuenta</th>
                                     <th>Fecha</th>
-                                    <th>Monto (Bs)</th>
                                     <th>Monto ($us)</th>    
                                     
                                 </tr>
@@ -35,15 +34,10 @@
                                     <td>{{ pagocuentas.usuarioM.nombre }}</td>
                                     <td>{{ pagocuentas.cuenta.nombres}} {{ pagocuentas.cuenta.apellidos }}</td>
                                     <td>{{ pagocuentas.fecha | date: 'dd/mm/YYYY HH:mm'}}</td>
-                                    <td>{{ pagocuentas.montoBs}}</td>
-                                    <td>{{ pagocuentas.montoSus }}</td>
+                                    <td *ngIf="pagocuentas.cambio!=0">{{ pagocuentas.montoSus + (pagocuentas.montoBs/pagocuentas.cambio) | number: '0.3-3' }}</td>
+                                    <td *ngIf="pagocuentas.cambio==0">{{ pagocuentas.montoSus | number: '0.3-3' }}</td>
                                    
-                                   
-                                   
-                                    <td class="text-nowrap">
-                                        
-                                        <a href="#" data-toggle="tooltip" data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
-                                    </td>
+                                  
                                 </tr>
                                
                             </tbody>

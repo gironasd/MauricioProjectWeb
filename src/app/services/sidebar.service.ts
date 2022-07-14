@@ -10,7 +10,7 @@ export class SidebarService {
       titulo: 'Pagos',
       icono: 'mdi mdi-gauge',
       submenu: [
-        { titulo: 'Lista Pagos', url: 'pagos'},
+        { titulo: 'Lista Pagos', url: 'pagos/diaActivos'},
       ]
     },
     {
